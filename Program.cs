@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using Provocarea02A_start;
 TemperatureSensor s1 = new TemperatureSensor("senzor1", -20, 100);
 TemperatureSensor s2 = new TemperatureSensor("senzor2", 0, 200);
@@ -31,3 +31,10 @@ foreach(double temp in s2.History)
 //Erori
 Console.WriteLine($"Erori gasite in senzorul {s1.Id}:{s1.ErrorCount}");
 Console.WriteLine($"Erori gasite in senzorul {s2.Id}:{s2.ErrorCount}");
+
+//Praguri inversate
+TemperatureSensor s3 = new TemperatureSensor("senzor3", 200, -20);
+//sub zero absolut
+s1.AddReading(-500);
+//fara identitate
+TemperatureSensor s4 = new TemperatureSensor("", -20, 100);
