@@ -28,19 +28,20 @@ public class TemperatureSensor
         }
         if(Min > Max)
         {
-            double temp;
-            temp=Min;
-            Min=Max;
-            Max=temp;
+            throw new ArgumentException("Praguri inversate");            
+            //double temp;
+            //temp=Min;
+            //Min=Max;
+            //Max=temp;
         }
-        else if ( Min == Max)
-        {
-            Max = Max + 1.0;
-        }
-        if (Min<=-273.15)
-        {
-            throw new ArgumentException("Valoare Imposibila");
-        }
+        //else if ( Min == Max)
+        //{
+            //Max = Max + 1.0;
+        //}
+        //if (Min<=-273.15)
+        //{
+            //throw new ArgumentException("Valoare Imposibila");
+        //}
         this.Min = Min;
         this.Max=Max;
     }
