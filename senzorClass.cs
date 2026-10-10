@@ -26,7 +26,7 @@ public class TemperatureSensor
         {
             throw new ArgumentException("Id gol");
         }
-        if(Min > Max)
+        if((Min > Max) || Min<=-273.15)
         {
             throw new ArgumentException("Praguri inversate");            
             //double temp;
